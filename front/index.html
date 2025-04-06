@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc de Notas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Notas</h1>
+        <button id="logout-btn">Cerrar Sesión</button>
+    </header>
+    
+    <main>
+        <section class="notes-container">
+            <div class="notes-actions">
+                <button id="new-note-btn">Nueva Nota</button>
+                <input type="text" id="search-notes" placeholder="Buscar notas...">
+            </div>
+            
+            <div class="notes-list" id="notes-list">
+                <!-- Las notas se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+        
+        <section class="note-editor hidden" id="note-editor">
+            <input type="text" id="note-title" placeholder="Título">
+            <textarea id="note-content" placeholder="Escribe tu nota aquí..."></textarea>
+            <div class="editor-actions">
+                <button id="save-note-btn">Guardar</button>
+                <button id="cancel-edit-btn">Cancelar</button>
+                <button id="delete-note-btn" class="danger hidden">Eliminar</button>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/notes.js"></script>
+</body>
+</html>

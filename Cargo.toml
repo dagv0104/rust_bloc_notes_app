@@ -1,0 +1,43 @@
+[package]
+name = "rust_bloc_notes_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = { version = "4", features = ["rustls","openssl"] } 
+actix-rt = "2"
+actix-identity = "0.5"
+actix-cors = "0.7"
+actix-files = "0.6"
+actix-web-rustls = "4.2.1"
+actix-tls = "3.0.0"
+openssl = { version = "0.10", features = ["vendored"] }
+
+
+rustls = "0.23"  
+tokio-rustls = "0.24.0" 
+
+# Serialización
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Base de datos y modelos
+diesel = { version = "2.0", features = ["sqlite", "chrono", "r2d2"] }
+diesel_migrations = { version = "2.0", features = ["sqlite"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Autenticación y seguridad
+bcrypt = "0.15"
+jsonwebtoken = "8"
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+# Configuración y logging
+dotenv = "0.15"
+log = "0.4"
+env_logger = "0.10"
+
+# Utilidades
+derive_more = "0.99"
+
+# TLS (ya incluido en actix-web con feature rustls)
+rustls-pemfile = "1.0"
